@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #bg-image {
+            background-image: url(hero1.jpg);
+        }
+        
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+
+<!-- Header Section -->
+<header class="bg-gray-950 text-white py-6">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <a href="#home">
+                <img src="./profile.ico" alt="profile icon" class="w-8 h-8 rounded-full">
+            </a>
+                <a href="#home"><h1 class="text-xl font-bold hover:text-gray-300">MBL</h1>
+            </a>
+        </div>
+        <nav class="hidden md:flex space-x-4">
+            <a href="#home" class="hover:text-gray-300">Home</a>
+            <a href="#projects" class="hover:text-gray-300">projects</a>
+            <a href="#contact" class="hover:text-gray-300">contact</a>
+        </nav>
+        <button class="md:hidden focus:outline-none" onclick="toggleMenu()" title="Toggle Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden hidden mt-4">
+        <a href="#home" class="block py-2 px-4 hover:bg-blue-700">Home</a>
+        <a href="#projects" class="block py-2 px-4 hover:bg-blue-700">projects</a>
+        <a href="#contact" class="block py-2 px-4 hover:bg-blue-700">contact</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="h-screen bg-cover bg-center bg-gray-900" id="bg-image">
+    <div class="container mx-auto text-center h-full flex flex-col justify-center">
+        <h2 class="text-white text-4xl sm:text-5xl md:text-6xl">
+            <strong class="text-cyan-500">Ben Lakhdher Malek</strong>
+        </h2>
+        <p class="text-white text-lg sm:text-xl mt-4">A <strong class="text-cyan-600">Software Developer</strong> Turning ideas into real-life <strong class="text-cyan-600">products</strong> is my calling</p>
+    </div>
+</section>
+<!-- Skills Section -->
+<section class="py-12 bg-gray-950" id="skills">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-8 text-white">Skills</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-900 p-6 rounded-lg hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+                <img src="./html.jpg" alt="HTML" class="w-full h-64 object-contain mb-4 rounded-md">
+                <h3 class="text-xl font-semibold text-white hover:text-red-400">HTML5</h3>
+            </div>
+            <div class="bg-gray-900 p-6 rounded-lg hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+                <img src="css1.jpg" alt="CSS" class="w-full h-64 object-contain mb-4 rounded-md">
+                <h3 class="text-xl font-semibold text-white hover:text-blue-400">CSS3</h3>
+            </div>
+            <div class="bg-gray-900 p-6 rounded-lg hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+                <img src="javascript.jpg" alt="JavaScript" class="w-full h-64 object-contain mb-4 rounded-md">
+                <h3 class="text-xl font-semibold text-white hover:text-yellow-400">JavaScript</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="bg-gray-950 py-12" id="projects">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-8 text-white">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-900 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                <img src="./project1.jpg" alt="Project 1" class="w-full h-48 object-cover mb-4 rounded-md">
+                <h3 class="text-xl font-semibold text-white">Project One</h3>
+                <p class="text-gray-300">Description of project one.</p>
+            </div>
+            <div class="bg-gray-900 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                <img src="project2.jpg" alt="Project 2" class="w-full h-48 object-cover mb-4 rounded-md">
+                <h3 class="text-xl font-semibold text-white">Project Two</h3>
+                <p class="text-gray-300">Description of project two.</p>
+            </div>
+            <div class="bg-gray-900 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                <img src="project3.jpg" alt="Project 3" class="w-full h-48 object-cover mb-4 rounded-md">
+                <h3 class="text-xl font-semibold text-white">Project Three</h3>
+                <p class="text-gray-300">Description of project three.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-12 bg-gray-950 text-white" id="contact">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-8">Contact Me</h2>
+        <form class="space-y-4 max-w-lg mx-auto">
+            <input type="text" placeholder="Your Name" class="w-full px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none">
+            <input type="email" placeholder="Your Email" class="w-full px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none">
+            <textarea placeholder="Your Message" class="w-full px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none" rows="5"></textarea>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-gray-950 text-white py-6">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="https://github.com/BENLAKHDHER" target="_blank" class="hover:text-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.207 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.337-5.466-5.93 0-1.311.469-2.38 1.236-3.221-.123-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.44 11.44 0 013.003-.404c1.02.005 2.044.137 3.003.403 2.292-1.552 3.3-1.23 3.3-1.23.653 1.653.24 2.874.117 3.176.77.84 1.236 1.91 1.236 3.221 0 4.61-2.805 5.621-5.475 5.921.43.372.823 1.103.823 2.222v3.293c0 .32.22.694.825.577C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/malek-ben-lakhdher/" target="_blank" class="hover:text-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.452 20.452h-3.853V15.78c0-1.115-.021-2.548-1.555-2.548-1.555 0-1.794 1.216-1.794 2.472v4.748h-3.853V9h3.7v1.561h.051c.516-.98 1.774-2.015 3.651-2.015 3.903 0 4.622 2.567 4.622 5.905v6.001zM5.337 7.433c-1.237 0-2.241-1.003-2.241-2.239 0-1.237 1.004-2.24 2.241-2.24 1.238 0 2.242 1.003 2.242 2.24 0 1.236-1.004 2.239-2.242 2.239zM6.9 20.452H3.773V9H6.9v11.452zM22.225 0H1.771C.791 0 0 .781 0 1.743v20.514C0 23.216.791 24 1.771 24h20.453c.979 0 1.771-.781 1.771-1.743V1.743C24 .781 23.204 0 22.225 0z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+   function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+</script>
+
+</body>
+</html>
