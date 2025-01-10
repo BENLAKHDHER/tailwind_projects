@@ -1,6 +1,6 @@
 # Tailwind Blog Project v2
 
-![Screenshot Enhanced Tailwind Blog Project](./tailwind_blog/images/ScreenShot_Enhanced.jpeg)
+![Screenshot Enhanced Tailwind Blog Project](./tailwind_blog/images/screenshot_enhanced.jpeg)
 
 ## Tailwind Blog Project v1
 
